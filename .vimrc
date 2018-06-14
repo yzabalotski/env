@@ -7,3 +7,5 @@ set path+=**
 " line number settings
 set number
 set relativenumber
+
+inoremap jk <esc>
