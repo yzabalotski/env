@@ -31,3 +31,7 @@ noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
+
+" show invisible symbols
+set listchars=eol:$,tab:>>,trail:~,extends:-,precedes:<
+set list
