@@ -22,3 +22,6 @@ highlight CursorLine ctermbg=16
 " highlight 80 column
 set colorcolumn=80
 highlight ColorColumn ctermbg=10
+
+" clean up highlighting after search
+nnoremap <F3> :let @/ = ""<CR>
