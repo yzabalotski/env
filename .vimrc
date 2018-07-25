@@ -14,3 +14,7 @@ let mapleader = " "
 " fast vimrc editting
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" highlight cursor line
+set cursorline
+highlight CursorLine ctermbg=16
