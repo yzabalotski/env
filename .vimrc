@@ -18,3 +18,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " highlight cursor line
 set cursorline
 highlight CursorLine ctermbg=16
+
+" highlight 80 column
+set colorcolumn=80
+highlight ColorColumn ctermbg=10
