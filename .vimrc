@@ -35,3 +35,12 @@ noremap <C-k> <C-w>k
 " show invisible symbols
 set listchars=eol:$,tab:>>,trail:~,extends:-,precedes:<
 set list
+
+" configure indent
+set smartindent
+
+" init pathgen
+execute pathogen#infect()
+
+" open Tagbar
+nmap <F8> :TagbarToggle<CR>
