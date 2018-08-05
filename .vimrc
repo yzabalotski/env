@@ -17,7 +17,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " highlight cursor line
 set cursorline
-highlight CursorLine ctermbg=16
+highlight CursorLine ctermbg=16 cterm=none
 
 " highlight 80 column
 set colorcolumn=80
@@ -33,8 +33,8 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
 " show invisible symbols
-set listchars=eol:$,tab:>>,trail:~,extends:-,precedes:<
-set list
+" set listchars=eol:$,tab:>>,trail:~,extends:-,precedes:<
+" set list
 
 " configure indent
 set smartindent
@@ -44,3 +44,5 @@ execute pathogen#infect()
 
 " open Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+nnoremap <F4> :grep <cword> **/*.c **/*.h <CR>
