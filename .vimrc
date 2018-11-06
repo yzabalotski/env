@@ -56,3 +56,4 @@ highlight ColorColumn ctermbg=1
 set exrc
 
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+au FileType json setlocal equalprg=python\ -m\ json.tool
