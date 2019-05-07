@@ -47,11 +47,11 @@ colorscheme solarized
 
 " highlight cursor line
 set cursorline
-highlight CursorLine ctermbg=7
+highlight CursorLine ctermbg=0
 
 " highlight 80 column
 set colorcolumn=80
-highlight ColorColumn ctermbg=1
+highlight ColorColumn ctermbg=0
 
 set exrc
 
