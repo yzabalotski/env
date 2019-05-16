@@ -27,7 +27,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
 " show invisible symbols
-set listchars=eol:$,tab:>>,trail:~,extends:-,precedes:<
+set listchars=eol:$,tab:>-,trail:~,extends:-,precedes:<
 set list
 
 " configure indent
@@ -57,3 +57,6 @@ set exrc
 
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 au FileType json setlocal equalprg=python\ -m\ json.tool
+
+hi SpecialKey ctermbg=8
+hi SpecialKey ctermfg=0
