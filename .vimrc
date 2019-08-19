@@ -39,7 +39,7 @@ execute pathogen#infect()
 " open Tagbar
 nmap <F8> :TagbarToggle<CR>
 
-nnoremap <F4> :grep <cword> **/*.c **/*.h <CR>
+nnoremap <F4> :grep -R <cword> * <CR>:cw <CR>
 
 " solarized theme
 set background=dark
