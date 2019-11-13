@@ -10,7 +10,9 @@ set path+=**
 set number
 set relativenumber
 
-inoremap jk <esc>
+" =============================================================================
+" key mappings
+" =============================================================================
 let mapleader = " "
 
 " fast vimrc editting
@@ -18,13 +20,19 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " clean up highlighting after search
-nnoremap <F3> :let @/ = ""<CR>
+nnoremap <silent> <F3> :let @/ = ""<CR>
 
 " handy movements between buffers
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
+
+" simplify using tabs (alt(meta) + h/j)
+nnoremap <M-h> gT
+nnoremap <M-l> gt
+nnoremap <M-t> :tabnew<cr>
+nnoremap <M-q> :tabclose<cr>
 
 " show invisible symbols
 set listchars=eol:$,tab:>-,trail:~,extends:-,precedes:<
