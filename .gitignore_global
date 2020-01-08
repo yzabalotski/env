@@ -71,7 +71,6 @@ dkms.conf
 
 # Executables
 
-<<<<<<< HEAD
 ### Java ###
 # Compiled class file
 *.class
@@ -96,7 +95,6 @@ dkms.conf
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-=======
 ### CMake ###
 CMakeLists.txt.user
 CMakeCache.txt
@@ -113,7 +111,6 @@ _deps
 ### CMake Patch ###
 # External projects
 *-prefix/
->>>>>>> dc943ce0a029f3e11a1815120f72e84abfc034dd
 
 ### Linux ###
 *~
@@ -148,4 +145,6 @@ Session.vim
 # Auto-generated tag files
 tags
 # Persistent undo
-[._]*.un~
+[._]*.un
+
+build
