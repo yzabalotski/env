@@ -68,3 +68,7 @@ au FileType json setlocal equalprg=python\ -m\ json.tool
 
 hi SpecialKey ctermbg=8
 hi SpecialKey ctermfg=0
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
