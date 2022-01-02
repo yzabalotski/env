@@ -20,7 +20,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " clean up highlighting after search
-nnoremap <silent> <F3> :let @/ = ""<CR>
+nnoremap <silent> <F2> :let @/ = ""<CR>
 
 " handy movements between buffers
 noremap <C-l> <C-w>l
