@@ -148,3 +148,5 @@ tags
 [._]*.un
 
 build
+.ccls
+.ccls-cache
