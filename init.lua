@@ -26,6 +26,8 @@ vim.cmd([[
 call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 call plug#end()
 ]])
 -- solarized
@@ -62,6 +64,12 @@ require'lspconfig'.pyright.setup{
 require'lspconfig'.clangd.setup{
     on_attach = on_attach
 }
+-- telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 --------------------------------------------------------------------------------
 -- keymaps
 --------------------------------------------------------------------------------
