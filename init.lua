@@ -3,8 +3,6 @@ local cmd = vim.cmd
 --------------------------------------------------------------------------------
 -- general settings
 --------------------------------------------------------------------------------
-local g = vim.g
-g.mapleader = ' '
 -- set nocompatible ?
 cmd'syntax enable'
 -- set path+=** ?
@@ -63,7 +61,7 @@ local on_attach = function(client, bufnr)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  --vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   --vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
@@ -91,6 +89,8 @@ require "lsp_signature".setup({
   }
 })
 -- telescope
+local g = vim.g
+g.mapleader = ' '
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
@@ -188,4 +188,6 @@ map('', '<M-h>', 'gT', default_opts)
 map('', '<M-l>', 'gt', default_opts)
 map('', '<M-t>', ':tabnew<cr>', default_opts)
 map('', '<M-q>', ':tabclose<cr>', default_opts)
+
 map('n', 'gr', ':lua vim.lsp.buf.references()<cr>', default_opts)
+map('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', default_opts)
