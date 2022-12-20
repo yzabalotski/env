@@ -27,6 +27,8 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'BurntSushi/ripgrep'
+Plug 'sharkdp/fd'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 call plug#end()
 ]])
@@ -37,7 +39,7 @@ cmd'colorscheme solarized'
 -- `on_attach` function example from git repo
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
-  -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  --vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -56,7 +58,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  vim.keymap.set('n', '<space>F', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 require'lspconfig'.pyright.setup{
     on_attach = on_attach
