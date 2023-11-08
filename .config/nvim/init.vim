@@ -20,3 +20,20 @@ nnoremap <M-l> gt
 " show invisible symbols
 set listchars=eol:$,tab:>-,trail:~,extends:-,precedes:<
 set list
+
+call plug#begin()
+" telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
+" solarized
+Plug 'altercation/vim-colors-solarized'
+call plug#end()
+
+" find files using Telescope command-line sugar
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
+" solarized
+syntax enable
+set background=dark
+colorscheme solarized
