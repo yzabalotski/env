@@ -14,8 +14,11 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
+" simplify using tabs
 nnoremap <M-h> gT
 nnoremap <M-l> gt
+nnoremap <M-t> :tabnew<cr>
+nnoremap <M-q> :tabclose<cr>
 
 " show invisible symbols
 set listchars=eol:$,tab:>-,trail:~,extends:-,precedes:<
