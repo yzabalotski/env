@@ -40,3 +40,11 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 syntax enable
 set background=dark
 colorscheme solarized
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smartindent
+set smarttab
+
