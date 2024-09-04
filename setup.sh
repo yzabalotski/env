@@ -4,3 +4,7 @@ sudo dnf install -y \
 	google-chrome 
 
 # TODO: add gnome-tweaks 
+
+cd
+
+ln -s $(pwd)/projects/env/.config/nvim .config/nvim
