@@ -16,3 +16,5 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "120"
 
 vim.opt.background = "dark"
+
+vim.opt.termguicolors = true
